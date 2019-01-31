@@ -1,10 +1,10 @@
 import { Injectable } from '@nestjs/common';
-import {InjectConfig} from 'nestjs-config';
+import { InjectConfig, ModuleConfig } from 'nestjs-config';
 
 @Injectable()
 export class AppService {
 
-  constructor(@InjectConfig() private readonly config) {
+  constructor(@InjectConfig() private readonly config: ModuleConfig) {
     this.config = config;
   }
 
